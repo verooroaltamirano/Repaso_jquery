@@ -4,40 +4,44 @@ $(document).ready (function (){
       let valoruno = $("#valor1").val()
       let valordos= $("#valor2").val()
       let valortres=$("#valor3").val()
-
-      valoruno=parseInt(valoruno)
-      valordos=parseInt(valordos)
-
-      let valoruno = $("#valor1").val()
-      let valordos = $("#valor2").val()
-      let valortres = $("#valor3").val()
-
+      let resultado = 0
+      let resultado2 = 0
       valoruno=parseFloat(valoruno)
       valordos=parseFloat(valordos)
       
       if(valortres=="sum"){
         resultado=valoruno + valordos
-        console.log("resultado suma")
+        $("#resultado").text(resultado)
+        console.log( `resultado suma: ${resultado} `)
       }
-      if(valortres=="res"){ 
+      else if(valortres=="res"){ 
         resultado=valoruno - valordos
-        console.log("resultado resta")
+        $("#resultado").text(resultado)
+        console.log( `resultado resta:${resultado} `)
       }
-      if(valortres =="multi"){
+      else if(valortres =="multi"){
         resultado = valoruno * valordos
-        console.log("resultado multiplica")
+        $("#resultado").text(resultado)
+        console.log( `resultado multiplica:${resultado}` )
       }  
-      if(valortres=="divi"){ 
+      else if(valortres=="divi"){ 
         resultado=valoruno/valordos
-        console.log("resultado divison") 
+        $("#resultado").text(resultado)
+        console.log( `resultado divison:${resultado}` )
       }
-      if(valortres=="poten"){
-        resultado=valoruno ** valordos
-        console.log("resultado potencia")
+      else if(valortres=="poten"){
+        resultado=valoruno ** valordos 
+        $("#resultado").text(resultado)
+        console.log(`resultado potencia:${resultado}` )
       }
-      else if(valortres =="sum,res,multi,divi,poten"){
-        resultado = valoruno &&valordos
-        console.log("operacion erronea")
+      else if(valortres=="rcubic"){
+        resultado = Math.sqrt(valoruno) 
+        resultado2 = Math.sqrt(valordos) 
+        $("#resultado").text(`resultado raiz_cuadrada del primer valor es :${resultado} y el resultado de la raiz del segundo valor es ${resultado2}`)
+        console.log(`resultado raiz_cuadrada del primer valor es :${resultado} y el resultado de la raiz del segundo valor es ${resultado2}` )
+      }
+      else{
+        console.log( `operacion erronea:${resultado} `)
         $("resultado").text(resultado)
       }
   });
