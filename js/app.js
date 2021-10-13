@@ -34,7 +34,7 @@ $(document).ready (function (){
         $("#resultado").text(resultado)
         console.log(`resultado potencia:${resultado}` )
       }
-      else if(valortres=="rcubic"){
+      else if(valortres=="rcuad"){
         resultado = Math.sqrt(valoruno) 
         resultado2 = Math.sqrt(valordos) 
         $("#resultado").text(`resultado raiz_cuadrada del primer valor es :${resultado} y el resultado de la raiz del segundo valor es ${resultado2}`)
