@@ -45,5 +45,4 @@ $(document).ready (function (){
         $("resultado").text(resultado)
       }
   });
-    
 }) 
